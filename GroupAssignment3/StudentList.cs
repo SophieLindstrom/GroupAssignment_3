@@ -2,8 +2,9 @@
 
 namespace GroupAssignment3
 {
-/*
+
     class StudentList: IStudentList
+
     {
         const int MaxNrOfStudents = 50;
         string[] students;
@@ -11,7 +12,13 @@ namespace GroupAssignment3
         private int _NrOfStudents = 0;
         public int NrOfStudents => _NrOfStudents;
 
-        public override string ToString()
+        public int NrOfGroups { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public int NrStudentsInGroup => throw new NotImplementedException();
+
+        public int NrStudentsNotInGroup => throw new NotImplementedException();
+
+        public override string ToString()//fråga
         {
             string sRet = "";
             for (int i = 0; i < _NrOfStudents; i++)
@@ -61,6 +68,26 @@ namespace GroupAssignment3
 
             _NrOfStudents = 30;
         }
+
+        public void sortStrings()
+        {
+            String temp;
+
+            // Sorting strings using bubble sort
+            for (int j = 0; j < _NrOfStudents - 1; j++)
+            {
+                for (int i = j + 1; i < _NrOfStudents; i++)
+                {
+                    if (students[j].CompareTo(students[i]) > 0)
+                    {
+                        temp = students[j];
+                        students[j] = students[i];
+                        students[i] = temp;
+                    }
+                }
+            }
+
+        }
     }
-*/
+
 }
