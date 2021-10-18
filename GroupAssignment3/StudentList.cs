@@ -3,22 +3,56 @@
 namespace GroupAssignment3
 {
 
-    class StudentList: IStudentList
+    public class StudentList: IStudentList
 
     {
         const int MaxNrOfStudents = 50;
         string[] students;
 
         private int _NrOfStudents = 0;
-        public int NrOfStudents => _NrOfStudents;
+        private int _NrOfGroups = 0;
+        private int _NrOfStudentsInGroup = 0;
+        private int _NrOfStudentsNotInGroup = 0;
+        public int NrOfStudents
+        {
+            get
+            {
+                return _NrOfStudents;
+            }
+        }
 
-        public int NrOfGroups { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public int NrStudentsInGroup => throw new NotImplementedException();
+        public int NrOfGroups 
+        { 
+            get
+            {
+                return _NrOfGroups;
+            }
+            set
+            {
+                _NrOfGroups = value;
+                _NrOfStudentsInGroup = _NrOfStudents / _NrOfGroups;
+                _NrOfStudentsNotInGroup = _NrOfStudents % _NrOfGroups;
+            } 
+        }
 
-        public int NrStudentsNotInGroup => throw new NotImplementedException();
+        public int NrStudentsInGroup 
+        {
+            get
+            {
+                return _NrOfStudentsInGroup;
+            }
+        }
 
-        public override string ToString()//fråga
+        public int NrStudentsNotInGroup
+        {
+            get
+            {
+                return _NrOfStudentsNotInGroup;
+            }
+        }
+
+        public override string ToString()
         {
             string sRet = "";
             for (int i = 0; i < _NrOfStudents; i++)
@@ -78,7 +112,9 @@ namespace GroupAssignment3
             {
                 for (int i = j + 1; i < _NrOfStudents; i++)
                 {
-                    if (students[j].CompareTo(students[i]) > 0)
+
+
+                    if (students[j].CompareTo(students[i]) > 0)// Compare to bcos its strings.
                     {
                         temp = students[j];
                         students[j] = students[i];

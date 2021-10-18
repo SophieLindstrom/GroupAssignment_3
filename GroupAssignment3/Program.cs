@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GroupAssignment3
+namespace GroupAssignment3 //Sophie, Jonathan, Theo; Finan
 {
     class Program
     {
@@ -36,6 +36,7 @@ namespace GroupAssignment3
             if (!Continue) return;
 
             myStudents.NrOfGroups = NrOfGroups;
+            
             Console.WriteLine($"If you make {NrOfGroups} group(s), each group will have {myStudents.NrStudentsInGroup} student(s) with {myStudents.NrStudentsNotInGroup} student(s) remaining to be placed in the groups.");
         }
         
