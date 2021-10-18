@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GroupAssignment3 //Sophie, Jonathan, Theo; Finan
+namespace GroupAssignment3 //Sophie, Jonathan, Theo, Finan
 {
     class Program
     {
