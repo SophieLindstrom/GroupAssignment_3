@@ -7,14 +7,9 @@ namespace GroupAssignment3 //Sophie, Jonathan, Theo, Finan
         static void Main(string[] args)
         {
             
-          
-
-
-            //Main program is using IStudentList as the type. 
-            //Compilation works fine. 
             IStudentList myStudents = null;
 
-            //Before execution myStudents needs to be assign an instance of StudentList
+            
             myStudents = new StudentList();
 
             Console.WriteLine("Empty student list");
@@ -26,7 +21,7 @@ namespace GroupAssignment3 //Sophie, Jonathan, Theo, Finan
 
             Console.WriteLine("\nSorted student list");
             myStudents.sortStrings();
-            Console.WriteLine(myStudents.ToString());//förklara för jonatan.
+            Console.WriteLine(myStudents.ToString());
             Console.WriteLine();
             
             

@@ -31,8 +31,8 @@ namespace GroupAssignment3
             set
             {
                 _NrOfGroups = value;
-                _NrOfStudentsInGroup = _NrOfStudents / _NrOfGroups;
-                _NrOfStudentsNotInGroup = _NrOfStudents % _NrOfGroups;
+                _NrOfStudentsInGroup = _NrOfStudents / _NrOfGroups; //how many students in each group and how many groups.
+                _NrOfStudentsNotInGroup = _NrOfStudents % _NrOfGroups;//how many remaining students after setting the groups.
             } 
         }
 
@@ -114,7 +114,7 @@ namespace GroupAssignment3
                 {
 
 
-                    if (students[j].CompareTo(students[i]) > 0)// Compare to bcos its strings.
+                    if (students[j].CompareTo(students[i]) > 0)
                     {
                         temp = students[j];
                         students[j] = students[i];
